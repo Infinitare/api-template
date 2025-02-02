@@ -14,7 +14,7 @@ func Add() *muxtrace.Router {
 	router.Use(mux.CORSMethodMiddleware(router.Router))
 	router.Use(requests.HandleCORS)
 
-	router.HandleFunc("/BYsDXTr0gEBWK35kQf0i", nil).Methods(http.MethodGet)
+	router.HandleFunc("/datadog/ping", nil).Methods(http.MethodGet)
 	router.HandleFunc("/hello", hello.Handle).Methods(http.MethodPost, http.MethodOptions)
 
 	router.NotFoundHandler = requests.NotFoundHandler
